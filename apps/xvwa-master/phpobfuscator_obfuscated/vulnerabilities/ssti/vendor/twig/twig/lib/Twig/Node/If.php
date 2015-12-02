@@ -1,0 +1,5 @@
+<?php
+class Twig_Node_If extends Twig_Node { public function __construct(Twig_NodeInterface $sp754928, Twig_NodeInterface $sp4fa8a7 = null, $sp1f599c, $sp836199 = null) { parent::__construct(array('tests' => $sp754928, 'else' => $sp4fa8a7), array(), $sp1f599c, $sp836199); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->addDebugInfo($this); for ($spc83c7f = 0, $spffdcfa = count($this->getNode('tests')); $spc83c7f < $spffdcfa; $spc83c7f += 2) { if ($spc83c7f > 0) { $spa1c015->outdent()->write('} elseif ('); } else { $spa1c015->write('if ('); } $spa1c015->subcompile($this->getNode('tests')->getNode($spc83c7f))->raw(') {
+')->indent()->subcompile($this->getNode('tests')->getNode($spc83c7f + 1)); } if ($this->hasNode('else') && null !== $this->getNode('else')) { $spa1c015->outdent()->write('} else {
+')->indent()->subcompile($this->getNode('else')); } $spa1c015->outdent()->write('}
+'); } }

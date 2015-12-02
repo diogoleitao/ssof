@@ -1,0 +1,2 @@
+<?php
+interface Twig_NodeVisitorInterface { public function enterNode(Twig_NodeInterface $spcefb62, Twig_Environment $spf4b92b); public function leaveNode(Twig_NodeInterface $spcefb62, Twig_Environment $spf4b92b); public function getPriority(); }

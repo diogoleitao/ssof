@@ -1,0 +1,11 @@
+<?php
+class Twig_Tests_Node_IncludeTest extends Twig_Test_NodeTestCase { public function testConstructor() { $sp005e3e = new Twig_Node_Expression_Constant('foo.twig', 1); $spcefb62 = new Twig_Node_Include($sp005e3e, null, false, false, 1); $this->assertNull($spcefb62->getNode('variables')); $this->assertEquals($sp005e3e, $spcefb62->getNode('expr')); $this->assertFalse($spcefb62->getAttribute('only')); $sp6f9980 = new Twig_Node_Expression_Array(array(new Twig_Node_Expression_Constant('foo', 1), new Twig_Node_Expression_Constant(true, 1)), 1); $spcefb62 = new Twig_Node_Include($sp005e3e, $sp6f9980, true, false, 1); $this->assertEquals($sp6f9980, $spcefb62->getNode('variables')); $this->assertTrue($spcefb62->getAttribute('only')); } public function getTests() { $sp754928 = array(); $sp005e3e = new Twig_Node_Expression_Constant('foo.twig', 1); $spcefb62 = new Twig_Node_Include($sp005e3e, null, false, false, 1); $sp754928[] = array($spcefb62, '// line 1
+$this->loadTemplate("foo.twig", null, 1)->display($context);'); $sp005e3e = new Twig_Node_Expression_Conditional(new Twig_Node_Expression_Constant(true, 1), new Twig_Node_Expression_Constant('foo', 1), new Twig_Node_Expression_Constant('foo', 1), 0); $spcefb62 = new Twig_Node_Include($sp005e3e, null, false, false, 1); $sp754928[] = array($spcefb62, '// line 1
+$this->loadTemplate(((true) ? ("foo") : ("foo")), null, 1)->display($context);'); $sp005e3e = new Twig_Node_Expression_Constant('foo.twig', 1); $sp6f9980 = new Twig_Node_Expression_Array(array(new Twig_Node_Expression_Constant('foo', 1), new Twig_Node_Expression_Constant(true, 1)), 1); $spcefb62 = new Twig_Node_Include($sp005e3e, $sp6f9980, false, false, 1); $sp754928[] = array($spcefb62, '// line 1
+$this->loadTemplate("foo.twig", null, 1)->display(array_merge($context, array("foo" => true)));'); $spcefb62 = new Twig_Node_Include($sp005e3e, $sp6f9980, true, false, 1); $sp754928[] = array($spcefb62, '// line 1
+$this->loadTemplate("foo.twig", null, 1)->display(array("foo" => true));'); $spcefb62 = new Twig_Node_Include($sp005e3e, $sp6f9980, true, true, 1); $sp754928[] = array($spcefb62, '// line 1
+try {
+    $this->loadTemplate("foo.twig", null, 1)->display(array("foo" => true));
+} catch (Twig_Error_Loader $e) {
+    // ignore missing template
+}'); return $sp754928; } }

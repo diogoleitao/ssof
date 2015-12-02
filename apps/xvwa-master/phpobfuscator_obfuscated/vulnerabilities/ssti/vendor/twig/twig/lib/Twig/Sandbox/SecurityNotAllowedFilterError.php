@@ -1,0 +1,2 @@
+<?php
+class Twig_Sandbox_SecurityNotAllowedFilterError extends Twig_Sandbox_SecurityError { private $filterName; public function __construct($sp9f2d02, $sp152e4e, $sp1f599c = -1, $sp79b407 = null, Exception $sp02a259 = null) { parent::__construct($sp9f2d02, $sp1f599c, $sp79b407, $sp02a259); $this->filterName = $sp152e4e; } public function getFilterName() { return $this->filterName; } }

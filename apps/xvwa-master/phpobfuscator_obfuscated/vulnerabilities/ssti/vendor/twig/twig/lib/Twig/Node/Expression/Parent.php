@@ -1,0 +1,3 @@
+<?php
+class Twig_Node_Expression_Parent extends Twig_Node_Expression { public function __construct($sp3eec35, $sp1f599c, $sp836199 = null) { parent::__construct(array(), array('output' => false, 'name' => $sp3eec35), $sp1f599c, $sp836199); } public function compile(Twig_Compiler $spa1c015) { if ($this->getAttribute('output')) { $spa1c015->addDebugInfo($this)->write('$this->displayParentBlock(')->string($this->getAttribute('name'))->raw(', $context, $blocks);
+'); } else { $spa1c015->raw('$this->renderParentBlock(')->string($this->getAttribute('name'))->raw(', $context, $blocks)'); } } }

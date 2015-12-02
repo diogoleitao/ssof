@@ -1,0 +1,2 @@
+<?php
+class Twig_Tests_Node_Expression_ConstantTest extends Twig_Test_NodeTestCase { public function testConstructor() { $spcefb62 = new Twig_Node_Expression_Constant('foo', 1); $this->assertEquals('foo', $spcefb62->getAttribute('value')); } public function getTests() { $sp754928 = array(); $spcefb62 = new Twig_Node_Expression_Constant('foo', 1); $sp754928[] = array($spcefb62, '"foo"'); return $sp754928; } }

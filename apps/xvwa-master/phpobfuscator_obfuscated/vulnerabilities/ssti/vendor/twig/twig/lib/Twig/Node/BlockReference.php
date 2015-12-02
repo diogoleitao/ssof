@@ -1,0 +1,3 @@
+<?php
+class Twig_Node_BlockReference extends Twig_Node implements Twig_NodeOutputInterface { public function __construct($sp3eec35, $sp1f599c, $sp836199 = null) { parent::__construct(array(), array('name' => $sp3eec35), $sp1f599c, $sp836199); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->addDebugInfo($this)->write(sprintf('$this->displayBlock(\'%s\', $context, $blocks);
+', $this->getAttribute('name'))); } }

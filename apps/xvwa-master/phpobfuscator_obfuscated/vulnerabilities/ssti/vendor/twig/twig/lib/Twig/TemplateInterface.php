@@ -1,0 +1,2 @@
+<?php
+interface Twig_TemplateInterface { const ANY_CALL = 'any'; const ARRAY_CALL = 'array'; const METHOD_CALL = 'method'; public function render(array $spdacfa9); public function display(array $spdacfa9, array $sp8696f5 = array()); public function getEnvironment(); }

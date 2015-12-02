@@ -1,0 +1,2 @@
+<?php
+class Twig_Error_Loader extends Twig_Error { public function __construct($sp9f2d02, $sp1f599c = -1, $sp79b407 = null, Exception $sp02a259 = null) { parent::__construct($sp9f2d02, false, false, $sp02a259); } }

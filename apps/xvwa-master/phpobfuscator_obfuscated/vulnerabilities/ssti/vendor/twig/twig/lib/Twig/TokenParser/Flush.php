@@ -1,0 +1,2 @@
+<?php
+class Twig_TokenParser_Flush extends Twig_TokenParser { public function parse(Twig_Token $sp650e38) { $this->parser->getStream()->expect(Twig_Token::BLOCK_END_TYPE); return new Twig_Node_Flush($sp650e38->getLine(), $this->getTag()); } public function getTag() { return 'flush'; } }

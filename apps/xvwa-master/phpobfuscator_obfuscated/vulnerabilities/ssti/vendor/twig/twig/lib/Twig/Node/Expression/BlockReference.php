@@ -1,0 +1,3 @@
+<?php
+class Twig_Node_Expression_BlockReference extends Twig_Node_Expression { public function __construct(Twig_NodeInterface $sp3eec35, $sp0bba70 = false, $sp1f599c, $sp836199 = null) { parent::__construct(array('name' => $sp3eec35), array('as_string' => $sp0bba70, 'output' => false), $sp1f599c, $sp836199); } public function compile(Twig_Compiler $spa1c015) { if ($this->getAttribute('as_string')) { $spa1c015->raw('(string) '); } if ($this->getAttribute('output')) { $spa1c015->addDebugInfo($this)->write('$this->displayBlock(')->subcompile($this->getNode('name'))->raw(', $context, $blocks);
+'); } else { $spa1c015->raw('$this->renderBlock(')->subcompile($this->getNode('name'))->raw(', $context, $blocks)'); } } }

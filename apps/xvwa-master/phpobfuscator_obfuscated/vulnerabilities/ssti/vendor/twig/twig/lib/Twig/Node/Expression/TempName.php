@@ -1,0 +1,2 @@
+<?php
+class Twig_Node_Expression_TempName extends Twig_Node_Expression { public function __construct($sp3eec35, $sp1f599c) { parent::__construct(array(), array('name' => $sp3eec35), $sp1f599c); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->raw('$_')->raw($this->getAttribute('name'))->raw('_'); } }

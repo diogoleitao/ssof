@@ -1,0 +1,2 @@
+<?php
+class Twig_Tests_Node_Expression_ParentTest extends Twig_Test_NodeTestCase { public function testConstructor() { $spcefb62 = new Twig_Node_Expression_Parent('foo', 1); $this->assertEquals('foo', $spcefb62->getAttribute('name')); } public function getTests() { $sp754928 = array(); $sp754928[] = array(new Twig_Node_Expression_Parent('foo', 1), '$this->renderParentBlock("foo", $context, $blocks)'); return $sp754928; } }

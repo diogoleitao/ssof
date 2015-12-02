@@ -1,0 +1,2 @@
+<?php
+interface Twig_Sandbox_SecurityPolicyInterface { public function checkSecurity($sp53db34, $sp34c924, $spbe1c61); public function checkMethodAllowed($sp1bd56d, $sp810c92); public function checkPropertyAllowed($sp1bd56d, $sp810c92); }

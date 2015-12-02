@@ -1,0 +1,5 @@
+<?php
+class Twig_Tests_Node_Expression_NameTest extends Twig_Test_NodeTestCase { public function testConstructor() { $spcefb62 = new Twig_Node_Expression_Name('foo', 1); $this->assertEquals('foo', $spcefb62->getAttribute('name')); } public function getTests() { $spcefb62 = new Twig_Node_Expression_Name('foo', 1); $sp55b7fd = new Twig_Node_Expression_Name('_self', 1); $spdacfa9 = new Twig_Node_Expression_Name('_context', 1); $spf4b92b = new Twig_Environment(null, array('strict_variables' => true)); $spc58d90 = new Twig_Environment(null, array('strict_variables' => false)); return array(array($spcefb62, '// line 1
+' . (PHP_VERSION_ID >= 50400 ? '(isset($context["foo"]) ? $context["foo"] : $this->getContext($context, "foo"))' : '$this->getContext($context, "foo")'), $spf4b92b), array($spcefb62, $this->getVariableGetter('foo', 1), $spc58d90), array($sp55b7fd, '// line 1
+$this'), array($spdacfa9, '// line 1
+$context')); } }

@@ -1,0 +1,8 @@
+<?php
+class Twig_Node_Include extends Twig_Node implements Twig_NodeOutputInterface { public function __construct(Twig_Node_Expression $sp005e3e, Twig_Node_Expression $sp3186fb = null, $sp8b7751 = false, $spb97f33 = false, $sp1f599c, $sp836199 = null) { parent::__construct(array('expr' => $sp005e3e, 'variables' => $sp3186fb), array('only' => (bool) $sp8b7751, 'ignore_missing' => (bool) $spb97f33), $sp1f599c, $sp836199); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->addDebugInfo($this); if ($this->getAttribute('ignore_missing')) { $spa1c015->write('try {
+')->indent(); } $this->addGetTemplate($spa1c015); $spa1c015->raw('->display('); $this->addTemplateArguments($spa1c015); $spa1c015->raw(');
+'); if ($this->getAttribute('ignore_missing')) { $spa1c015->outdent()->write('} catch (Twig_Error_Loader $e) {
+')->indent()->write('// ignore missing template
+')->outdent()->write('}
+
+'); } } protected function addGetTemplate(Twig_Compiler $spa1c015) { $spa1c015->write('$this->loadTemplate(')->subcompile($this->getNode('expr'))->raw(', ')->repr($spa1c015->getFilename())->raw(', ')->repr($this->getLine())->raw(')'); } protected function addTemplateArguments(Twig_Compiler $spa1c015) { if (null === $this->getNode('variables')) { $spa1c015->raw(false === $this->getAttribute('only') ? '$context' : 'array()'); } elseif (false === $this->getAttribute('only')) { $spa1c015->raw('array_merge($context, ')->subcompile($this->getNode('variables'))->raw(')'); } else { $spa1c015->subcompile($this->getNode('variables')); } } }

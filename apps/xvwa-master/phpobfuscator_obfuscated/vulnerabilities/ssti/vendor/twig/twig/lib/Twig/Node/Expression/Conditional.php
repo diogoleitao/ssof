@@ -1,0 +1,2 @@
+<?php
+class Twig_Node_Expression_Conditional extends Twig_Node_Expression { public function __construct(Twig_Node_Expression $sp01608e, Twig_Node_Expression $spe3703d, Twig_Node_Expression $spf2a2ea, $sp1f599c) { parent::__construct(array('expr1' => $sp01608e, 'expr2' => $spe3703d, 'expr3' => $spf2a2ea), array(), $sp1f599c); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->raw('((')->subcompile($this->getNode('expr1'))->raw(') ? (')->subcompile($this->getNode('expr2'))->raw(') : (')->subcompile($this->getNode('expr3'))->raw('))'); } }

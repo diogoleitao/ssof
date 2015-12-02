@@ -1,0 +1,3 @@
+<?php
+class Twig_Tests_Node_ImportTest extends Twig_Test_NodeTestCase { public function testConstructor() { $sp0e335b = new Twig_Node_Expression_Constant('foo.twig', 1); $sp517828 = new Twig_Node_Expression_AssignName('macro', 1); $spcefb62 = new Twig_Node_Import($sp0e335b, $sp517828, 1); $this->assertEquals($sp0e335b, $spcefb62->getNode('expr')); $this->assertEquals($sp517828, $spcefb62->getNode('var')); } public function getTests() { $sp754928 = array(); $sp0e335b = new Twig_Node_Expression_Constant('foo.twig', 1); $sp517828 = new Twig_Node_Expression_AssignName('macro', 1); $spcefb62 = new Twig_Node_Import($sp0e335b, $sp517828, 1); $sp754928[] = array($spcefb62, '// line 1
+$context["macro"] = $this->loadTemplate("foo.twig", null, 1);'); return $sp754928; } }

@@ -1,0 +1,3 @@
+<?php
+class Twig_Node_SetTemp extends Twig_Node { public function __construct($sp3eec35, $sp1f599c) { parent::__construct(array(), array('name' => $sp3eec35), $sp1f599c); } public function compile(Twig_Compiler $spa1c015) { $sp3eec35 = $this->getAttribute('name'); $spa1c015->addDebugInfo($this)->write('if (isset($context[')->string($sp3eec35)->raw('])) { $_')->raw($sp3eec35)->raw('_ = $context[')->repr($sp3eec35)->raw(']; } else { $_')->raw($sp3eec35)->raw('_ = null; }
+'); } }

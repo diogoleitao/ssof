@@ -1,0 +1,3 @@
+<?php
+class Twig_Node_SandboxedPrint extends Twig_Node_Print { public function __construct(Twig_Node_Expression $sp005e3e, $sp1f599c, $sp836199 = null) { parent::__construct($sp005e3e, $sp1f599c, $sp836199); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->addDebugInfo($this)->write('echo $this->env->getExtension(\'sandbox\')->ensureToStringAllowed(')->subcompile($this->getNode('expr'))->raw(');
+'); } protected function removeNodeFilter($spcefb62) { if ($spcefb62 instanceof Twig_Node_Expression_Filter) { return $this->removeNodeFilter($spcefb62->getNode('node')); } return $spcefb62; } }

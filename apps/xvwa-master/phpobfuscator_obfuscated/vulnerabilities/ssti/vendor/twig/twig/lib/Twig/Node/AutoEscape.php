@@ -1,0 +1,2 @@
+<?php
+class Twig_Node_AutoEscape extends Twig_Node { public function __construct($spbb4d96, Twig_NodeInterface $sp1965de, $sp1f599c, $sp836199 = 'autoescape') { parent::__construct(array('body' => $sp1965de), array('value' => $spbb4d96), $sp1f599c, $sp836199); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->subcompile($this->getNode('body')); } }

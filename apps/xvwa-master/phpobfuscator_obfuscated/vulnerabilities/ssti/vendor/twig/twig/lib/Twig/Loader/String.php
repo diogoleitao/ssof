@@ -1,0 +1,2 @@
+<?php
+class Twig_Loader_String implements Twig_LoaderInterface, Twig_ExistsLoaderInterface { public function getSource($sp3eec35) { return $sp3eec35; } public function exists($sp3eec35) { return true; } public function getCacheKey($sp3eec35) { return $sp3eec35; } public function isFresh($sp3eec35, $sp37e15f) { return true; } }

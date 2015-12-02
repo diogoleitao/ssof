@@ -1,0 +1,2 @@
+<?php
+class Twig_Node_Expression_Binary_EndsWith extends Twig_Node_Expression_Binary { public function compile(Twig_Compiler $spa1c015) { $spf7d4a5 = $spa1c015->getVarName(); $spd6e19c = $spa1c015->getVarName(); $spa1c015->raw(sprintf('(is_string($%s = ', $spf7d4a5))->subcompile($this->getNode('left'))->raw(sprintf(') && is_string($%s = ', $spd6e19c))->subcompile($this->getNode('right'))->raw(sprintf(') && (\'\' === $%2$s || $%2$s === substr($%1$s, -strlen($%2$s))))', $spf7d4a5, $spd6e19c)); } public function operator(Twig_Compiler $spa1c015) { return $spa1c015->raw(''); } }

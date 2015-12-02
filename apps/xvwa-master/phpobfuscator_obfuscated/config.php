@@ -1,0 +1,2 @@
+<?php
+$spebb465 = '/var/www/html/xvwa'; $sp2f475e = 'localhost'; $sp78bdcb = 'xvwa'; $sp132538 = 'root'; $sp24f4f3 = 'root'; $sp696718 = mysql_connect($sp2f475e, $sp132538, $sp24f4f3); $spa13f94 = new mysqli($sp2f475e, $sp132538, $sp24f4f3, $sp78bdcb);

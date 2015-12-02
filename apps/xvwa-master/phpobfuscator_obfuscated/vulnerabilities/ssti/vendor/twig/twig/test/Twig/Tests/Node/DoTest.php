@@ -1,0 +1,3 @@
+<?php
+class Twig_Tests_Node_DoTest extends Twig_Test_NodeTestCase { public function testConstructor() { $sp005e3e = new Twig_Node_Expression_Constant('foo', 1); $spcefb62 = new Twig_Node_Do($sp005e3e, 1); $this->assertEquals($sp005e3e, $spcefb62->getNode('expr')); } public function getTests() { $sp754928 = array(); $sp005e3e = new Twig_Node_Expression_Constant('foo', 1); $spcefb62 = new Twig_Node_Do($sp005e3e, 1); $sp754928[] = array($spcefb62, '// line 1
+"foo";'); return $sp754928; } }

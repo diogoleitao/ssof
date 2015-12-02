@@ -1,0 +1,2 @@
+<?php
+abstract class Twig_Node_Expression_Binary extends Twig_Node_Expression { public function __construct(Twig_NodeInterface $spf7d4a5, Twig_NodeInterface $spd6e19c, $sp1f599c) { parent::__construct(array('left' => $spf7d4a5, 'right' => $spd6e19c), array(), $sp1f599c); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->raw('(')->subcompile($this->getNode('left'))->raw(' '); $this->operator($spa1c015); $spa1c015->raw(' ')->subcompile($this->getNode('right'))->raw(')'); } public abstract function operator(Twig_Compiler $spa1c015); }

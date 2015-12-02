@@ -1,0 +1,2 @@
+<?php
+class Twig_Test_Method extends Twig_Test { protected $extension; protected $method; public function __construct(Twig_ExtensionInterface $spd24372, $sp810c92, array $sp44f03d = array()) { $sp44f03d['callable'] = array($spd24372, $sp810c92); parent::__construct($sp44f03d); $this->extension = $spd24372; $this->method = $sp810c92; } public function compile() { return sprintf('$this->env->getExtension(\'%s\')->%s', $this->extension->getName(), $this->method); } }

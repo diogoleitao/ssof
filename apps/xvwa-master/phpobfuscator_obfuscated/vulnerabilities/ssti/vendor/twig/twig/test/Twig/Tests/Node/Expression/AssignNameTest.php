@@ -1,0 +1,2 @@
+<?php
+class Twig_Tests_Node_Expression_AssignNameTest extends Twig_Test_NodeTestCase { public function testConstructor() { $spcefb62 = new Twig_Node_Expression_AssignName('foo', 1); $this->assertEquals('foo', $spcefb62->getAttribute('name')); } public function getTests() { $spcefb62 = new Twig_Node_Expression_AssignName('foo', 1); return array(array($spcefb62, '$context["foo"]')); } }

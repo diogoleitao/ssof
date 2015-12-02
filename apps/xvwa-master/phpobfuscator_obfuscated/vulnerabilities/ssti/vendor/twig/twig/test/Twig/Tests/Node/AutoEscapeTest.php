@@ -1,0 +1,3 @@
+<?php
+class Twig_Tests_Node_AutoEscapeTest extends Twig_Test_NodeTestCase { public function testConstructor() { $sp1965de = new Twig_Node(array(new Twig_Node_Text('foo', 1))); $spcefb62 = new Twig_Node_AutoEscape(true, $sp1965de, 1); $this->assertEquals($sp1965de, $spcefb62->getNode('body')); $this->assertTrue($spcefb62->getAttribute('value')); } public function getTests() { $sp1965de = new Twig_Node(array(new Twig_Node_Text('foo', 1))); $spcefb62 = new Twig_Node_AutoEscape(true, $sp1965de, 1); return array(array($spcefb62, '// line 1
+echo "foo";')); } }

@@ -1,0 +1,2 @@
+<?php
+class Twig_Node_Expression_Constant extends Twig_Node_Expression { public function __construct($spbb4d96, $sp1f599c) { parent::__construct(array(), array('value' => $spbb4d96), $sp1f599c); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->repr($this->getAttribute('value')); } }

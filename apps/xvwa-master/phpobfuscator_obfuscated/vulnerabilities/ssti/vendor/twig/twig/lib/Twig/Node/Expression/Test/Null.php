@@ -1,0 +1,2 @@
+<?php
+class Twig_Node_Expression_Test_Null extends Twig_Node_Expression_Test { public function compile(Twig_Compiler $spa1c015) { $spa1c015->raw('(null === ')->subcompile($this->getNode('node'))->raw(')'); } }

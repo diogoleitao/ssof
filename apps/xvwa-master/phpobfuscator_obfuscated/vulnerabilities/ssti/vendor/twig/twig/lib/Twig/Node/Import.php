@@ -1,0 +1,3 @@
+<?php
+class Twig_Node_Import extends Twig_Node { public function __construct(Twig_Node_Expression $sp005e3e, Twig_Node_Expression $sp517828, $sp1f599c, $sp836199 = null) { parent::__construct(array('expr' => $sp005e3e, 'var' => $sp517828), array(), $sp1f599c, $sp836199); } public function compile(Twig_Compiler $spa1c015) { $spa1c015->addDebugInfo($this)->write('')->subcompile($this->getNode('var'))->raw(' = '); if ($this->getNode('expr') instanceof Twig_Node_Expression_Name && '_self' === $this->getNode('expr')->getAttribute('name')) { $spa1c015->raw('$this'); } else { $spa1c015->raw('$this->loadTemplate(')->subcompile($this->getNode('expr'))->raw(', ')->repr($spa1c015->getFilename())->raw(', ')->repr($this->getLine())->raw(')'); } $spa1c015->raw(';
+'); } }
